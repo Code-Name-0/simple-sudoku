@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 50px;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 600px;
+}
+
+.container .block {
+  margin: 2px;
+  padding: 17px;
+  border: black solid 4px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container .block .cell {
+  border: solid black 1px;
+  font-size: 3em;
+  width: 50px;
+  height: 50px;
+}
+
+.container .block .cell.yup {
+  color: green;
+}
+
+.container .block .cell.nope {
+  color: red;
+}
+
+.container .block .cell:hover {
+  border-radius: 10px;
+  transform: scale(1.1);
+  border: solid gray 3px;
+}
+
+.container .block .cell:nth-child(1),
+.container .block .cell:nth-child(4),
+.container .block .cell:nth-child(7) {
+  border-left: none;
+}
+
+.container .block .cell:nth-child(1),
+.container .block .cell:nth-child(2),
+.container .block .cell:nth-child(3) {
+  border-top: none;
+}
+
+.container .block .cell:nth-child(3),
+.container .block .cell:nth-child(6),
+.container .block .cell:nth-child(9) {
+  border-right: none;
+}
+
+.container .block .cell:nth-child(7),
+.container .block .cell:nth-child(8),
+.container .block .cell:nth-child(9) {
+  border-bottom: none;
+}
